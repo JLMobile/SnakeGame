@@ -127,6 +127,7 @@ namespace Snake
                     //if (userPoints < 0) userPoints = 0;
                     userPoints = Math.Max(userPoints, 0);
                     Console.WriteLine("Your points are: {0}", userPoints);
+                    Console.ReadLine();
                     return;
                 }
 
@@ -182,7 +183,7 @@ namespace Snake
 
                 if (Environment.TickCount - lastFoodTime >= foodDissapearTime)
                 {
-                    negativePoints = negativePoints + 50;
+                    negativePoints = negativePoints - 50;
                     Console.SetCursorPosition(food.col, food.row);
                     Console.Write(" ");
                     do
