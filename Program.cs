@@ -146,7 +146,7 @@ namespace Snake
 
                 if (snakeNewHead.col == food.col && snakeNewHead.row == food.row)
                 {
-                    // feeding the snake
+                    // feeding the snake in the game
                     do
                     {
                         food = new Position(randomNumbersGenerator.Next(0, Console.WindowHeight),
@@ -175,7 +175,7 @@ namespace Snake
                 }
                 else
                 {
-                    // moving..
+                    // moving the snake
                     Position last = snakeElements.Dequeue();
                     Console.SetCursorPosition(last.col, last.row);
                     Console.Write(" ");
