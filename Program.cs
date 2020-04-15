@@ -39,7 +39,7 @@ namespace Snake
             };
             double sleepTime = 100;
             int direction = right;
-            Random randomNumbersGenerator = new Random();
+            Random randomNumbersGenerator = new Random(); //generate random number in the game
             Console.BufferHeight = Console.WindowHeight;
             lastFoodTime = Environment.TickCount;
 
