@@ -57,6 +57,18 @@ namespace Snake
         /// <summary>
         /// Functions start here
         /// </summary>
+        public void BackgroundMusic()
+        {
+            //Create SoundPlayer objbect to control sound playback
+            SoundPlayer backgroundMusic = new SoundPlayer();
+
+            //Locate the SoundPlayer to the correct sound directory
+            backgroundMusic.SoundLocation = AppDomain.CurrentDomain.BaseDirectory + "/SnakeBGM_1_Extended.wav";
+
+            //Play the background music at the beginning
+           // backgroundMusic.Play();
+        }
+
         
         public void SoundEffect()
         {
