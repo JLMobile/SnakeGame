@@ -28,7 +28,13 @@ namespace Snake
 
         private static bool MainMenu()
         {
+            string user_name;
+
+            Console.WriteLine("Please enter your name: ");
+            user_name = Console.ReadLine();
             Console.Clear();
+
+            Console.WriteLine("\t" + "\t" + "\t" + "\t" + "\t" + "\t" + "Welcome to the Snake Game " + user_name);
             Console.WriteLine("\t" + "\t" + "\t" + "\t" + "\t" + "\t" + "Choose an option:");
             Console.WriteLine("\t" + "\t" + "\t" + "\t" + "\t" + "\t" + "1) Start Game");
             Console.WriteLine("\t" + "\t" + "\t" + "\t" + "\t" + "\t" + "2) High Scores");
