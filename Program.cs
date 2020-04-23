@@ -164,8 +164,8 @@ namespace Snake
                                                                                   //if (userPoints < 0) userPoints = 0;
                 userPoints = Math.Max(userPoints, 0);
                Console.WriteLine("\t"+ "\t"+ "\t" +"\t"+ "\t" + "\t"  + "Your points are: {0}", userPoints);//player total points shown once the game is over
-
-                SavePointsToFile(userPoints);
+                string user_name = null;
+                SavePointsToFile(userPoints,user_name);
                 //exit game only when enter key is pressed
                 Console.WriteLine("\t" + "\t" + "\t" + "\t" + "\t" + "\t" + "Press Enter to exit the game!");
                 while (Console.ReadKey().Key != ConsoleKey.Enter) { }
@@ -182,11 +182,11 @@ namespace Snake
                 if (!File.Exists(filePath))
                 {
                     File.Create(filePath).Dispose();
-                    File.WriteAllText(filePath, userPoints.ToString() + Environment.NewLine);
+                    File.WriteAllText(filePath, userPoints.ToString() + Environment.NewLine + user_name);
                 }
                 else
                 {
-                    File.AppendAllText(filePath, userPoints.ToString() + Environment.NewLine);
+                    File.AppendAllText(filePath, userPoints.ToString() + Environment.NewLine+ user_name);
                 }
             }
             catch (Exception exception)
