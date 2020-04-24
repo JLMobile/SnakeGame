@@ -28,20 +28,20 @@ namespace Snake
         {
             //main menu options
             Console.Clear();
-            Console.WriteLine("\t" + "\t" + "\t" + "\t" + "\t" + "\t" + "Choose an option:");
-            Console.WriteLine("\t" + "\t" + "\t" + "\t" + "\t" + "\t" + "1) Start Game");
-            Console.WriteLine("\t" + "\t" + "\t" + "\t" + "\t" + "\t" + "2) High Scores");
-            Console.WriteLine("\t" + "\t" + "\t" + "\t" + "\t" + "\t" + "3) Exit");
-            Console.Write("\t" + "\t" + "\t" + "\t" + "\t" + "\t" + "Select an option: ");
+            Console.WriteLine("\n"+"\n"+"\n"+"\n"+"\n"+"\n"+"\n"+"\n"+"\n"+"\n"+"\t" +"\t" + "\t" + "\t" + "\t" + "\t" + "\t" + "Choose an option:");
+            Console.WriteLine("\t" + "\t" + "\t" + "\t" + "\t" + "\t" + "\t"+ "1) Start Game");
+            Console.WriteLine("\t" + "\t" + "\t" + "\t" + "\t" + "\t" + "\t" + "2) High Scores");
+            Console.WriteLine("\t" + "\t" + "\t" + "\t" + "\t" + "\t" + "\t" + "3) Exit");
+            Console.Write("\t" + "\t" + "\t" + "\t" + "\t" + "\t" + "\t" + "Select an option: ");
 
             switch (Console.ReadLine())
             {
                 //level selector
                 case "1":
                     Console.Clear();
-                    Console.WriteLine("\t" + "\t" + "\t" + "\t" + "\t" + "\t" + "1)Normal Mode");
-                    Console.WriteLine("\t" + "\t" + "\t" + "\t" + "\t" + "\t" + "2)Hard Mode");
-                    Console.Write("\t" + "\t" + "\t" + "\t" + "\t" + "\t" + "Select an option: ");
+                    Console.WriteLine("\n" + "\n" + "\n" + "\n" + "\n" + "\n" + "\n" + "\n" + "\n" + "\n" + "\t" + "\t" + "\t" + "\t" + "\t" + "\t" + "\t" + "1)Normal Mode");
+                    Console.WriteLine("\t" + "\t" + "\t" + "\t" + "\t" + "\t" + "\t" + "2)Hard Mode");
+                    Console.Write("\t" + "\t" + "\t" + "\t" + "\t" + "\t" + "\t" + "Select an option: ");
                     switch (Console.ReadLine())
                     {
                         case "1":
@@ -142,15 +142,15 @@ namespace Snake
             {
                 Console.SetCursorPosition(0, 0);
                 Console.ForegroundColor = ConsoleColor.Red;//Text colour for the game over screen                                     
-                Console.WriteLine("\t" + "\t" + "\t" + "\t" + "\t" + "\t" + "Game Over!");
+                Console.WriteLine("\n" + "\n" + "\n" + "\n" + "\n" + "\n" + "\n" + "\n" + "\n" + "\n" + "\t" + "\t" + "\t" + "\t" + "\t" + "\t" + "\t" + "Game Over!");
                 int userPoints = (snakeElements.Count - 4) * 100 - negativePoints;    //points calculated for player
                 userPoints = Math.Max(userPoints, 0);
-                Console.WriteLine("\t" + "\t" + "\t" + "\t" + "\t" + "\t" + "Your points are: {0}", userPoints);
-                Console.Write("\t" + "\t" + "\t" + "\t" + "\t" + "\t" + "Please enter your name: ");
+                Console.WriteLine("\t" + "\t" + "\t" + "\t" + "\t" + "\t" + "\t" + "Your points are: {0}", userPoints);
+                Console.Write("\t" + "\t" + "\t" + "\t" + "\t" + "\t" + "\t" + "Please enter your name: ");
                 string user_name = Console.ReadLine();
                 SaveFile(userPoints, user_name);//keeps the points and username is SaveFile to be written in to file
                 //Exits the game when "Enter Key" is pressed
-                Console.WriteLine("\t" + "\t" + "\t" + "\t" + "\t" + "\t" + "Press Enter to exit the game!");
+                Console.WriteLine("\t" + "\t" + "\t" + "\t" + "\t" + "\t" + "\t" + "Press Enter to exit the game!");
                 while (Console.ReadKey().Key != ConsoleKey.Enter) { }
                 return 1;
             }
