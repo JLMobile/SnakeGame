@@ -28,13 +28,7 @@ namespace Snake
 
         private static bool MainMenu()
         {
-            string user_name;
-
-            Console.WriteLine("Please enter your name: ");
-            user_name = Console.ReadLine();
             Console.Clear();
-
-            Console.WriteLine("\t" + "\t" + "\t" + "\t" + "\t" + "\t" + "Welcome to the Snake Game " + user_name);
             Console.WriteLine("\t" + "\t" + "\t" + "\t" + "\t" + "\t" + "Choose an option:");
             Console.WriteLine("\t" + "\t" + "\t" + "\t" + "\t" + "\t" + "1) Start Game");
             Console.WriteLine("\t" + "\t" + "\t" + "\t" + "\t" + "\t" + "2) High Scores");
@@ -164,7 +158,8 @@ namespace Snake
                                                                                   //if (userPoints < 0) userPoints = 0;
                 userPoints = Math.Max(userPoints, 0);
                Console.WriteLine("\t"+ "\t"+ "\t" +"\t"+ "\t" + "\t"  + "Your points are: {0}", userPoints);//player total points shown once the game is over
-                string user_name = null;
+               Console.WriteLine("\t"+ "\t"+ "\t" +"\t"+ "\t" + "\t"  + "Please enter your name: ");
+                strong user_name=Console.Readline();
                 SavePointsToFile(userPoints,user_name);
                 //exit game only when enter key is pressed
                 Console.WriteLine("\t" + "\t" + "\t" + "\t" + "\t" + "\t" + "Press Enter to exit the game!");
