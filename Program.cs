@@ -42,7 +42,7 @@ namespace Snake
                     Console.Clear();
                     Console.WriteLine("\n" + "\n" + "\n" + "\n" + "\n" + "\n" + "\n" + "\n" + "\n" + "\n" + "\t" + "\t" + "\t" + "\t" + "\t" + "\t" + "\t" + "1)Normal Mode");
                     Console.WriteLine("\t" + "\t" + "\t" + "\t" + "\t" + "\t" + "\t" + "2)Hard Mode");
-                    Console.Write("\t" + "\t" + "\t" + "\t" + "\t" + "\t" + "\t" + "Select an option: ");
+                    Console.Write("\t"+ "\t" + "\t" + "\t" + "\t" + "\t" + "\t" + "Select an option: ");
                     switch (Console.ReadLine())
                     {
                         case "1":
